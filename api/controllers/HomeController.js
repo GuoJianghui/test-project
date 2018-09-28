@@ -104,7 +104,6 @@ module.exports = {
   },
 
   resolve: function(req, res, next) {
-    debugger
     var code = req.query.code;
     var state = req.query.state;
     if (!code) {
@@ -113,7 +112,6 @@ module.exports = {
 
     OAuthService.getClient().getAccessToken(code, function(err, token) {
       if (err || !token || !token.data || !token.data.openid) {
-        debugger
         return res.redirect('/home/reauth' + (state ? ('?state=' + state) : ''));
       }
 

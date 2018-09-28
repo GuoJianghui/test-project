@@ -24,9 +24,7 @@
   z-index: 1;
 }
 
-
-
-#section1, #section3 {
+#section1 {
   background: url('/images/wall-bg.png') repeat 0 0;
   overflow: hidden;
 }
@@ -121,10 +119,6 @@
 
 #slide5 {
   background-image: url(/images/11-786.jpg);
-}
-
-#section2 {
- background-image: url(/images/cheer.png);
 }
 
 .lottery {
