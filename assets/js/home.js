@@ -5,7 +5,7 @@
 
   PM.bgm = new PM.BGM($('#bgm-audio'), {
     src: '/audios/pm_bgm2.mp3',
-    autoplay: false
+    autoplay: true
   });
 
 
@@ -71,7 +71,7 @@
   $('#btn-checkin').on('tap', function(e) {
     var mask = $('#checkin-mask');
     var weuiActionsheet = $('#checkin-actionsheet');
-    var remainDays = Math.floor((new Date(2016, 9, 5) - new Date())/(24*3600*1000));
+    var remainDays = Math.floor((new Date(2018, 10, 26) - new Date())/(24*3600*1000));
     if (remainDays > 0) {
       weuiActionsheet.find('[data-status="present"]').addClass('disabled').find('small').html('还有' + remainDays + '天');
     }
@@ -136,8 +136,7 @@
         '你怎么才来啊',
         '终于等到你，还好我没放弃',
         '让祝福飞一会儿',
-        '你知道新郎和新娘是怎么认识的吗',
-        '天将降红包于斯人也'
+        '你知道新郎和新娘是怎么认识的吗'
       ];
       var curr = last;
 
