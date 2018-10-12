@@ -362,7 +362,7 @@
       } else {
         return $.ajax({
           type: 'GET',
-          url: 'http://webapi.amap.com/maps?v=1.3&key=ae7ec99e2aa1832237f39584e0b4418f&callback=gd_map_load',
+          url: 'http://webapi.amap.com/maps?v=1.4.10&key=ae7ec99e2aa1832237f39584e0b4418f&callback=gd_map_load',
           dataType: 'script',
           cache: true
         }).then(function() {
@@ -370,7 +370,7 @@
         }).done(function() {
           var map = new AMap.Map('pnl-map',{
             zoom: 17,
-            center: [119.979084,36.791932]
+            center: [119.979084, 36.791932]
           });
           var marker = new AMap.Marker({
             position: map.getCenter()
@@ -503,7 +503,7 @@
       src: '',
       loop: true,
       preload: true,
-      autoplay: false
+      autoplay: true
     }, options);
     this.$btn = $btn;
 
@@ -540,7 +540,7 @@
   BGM.prototype.initEvent = function() {
     var self = this;
     this.$audio.on("canplay", function() {
-      return self.$audio.get(0).play();
+      return self.play();
     }).on("play", function() {
       return self.$btn.addClass("playing");
     }).on("pause", function() {
